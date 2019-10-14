@@ -76,7 +76,7 @@ assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutp
 
 // Your function here
 
-func sortedNameByLastName(names:[(String, _ : String)]) -> [(String, String)] {
+func sortedNamesByLastName(names:[(String, _ : String)]) -> [(String, String)] {
     let result = names.sorted { $0.1 < $1.1 }
     return result
     }
@@ -102,8 +102,8 @@ let expectedOutputFour = [
     ("Nicolai","Rimsky-Korsakov")
 ]
 
-//let outputFour = sortedNamesByLastName(in: firstAndLastTuples)
-//assert(outputFour.elementsEqual(expectedOutputFour, by: { $0 == $1 }), "Expected output to be \(expectedOutputFour), but found \(outputFour)")
+let outputFour = sortedNamesByLastName(names: firstAndLastTuples)
+assert(outputFour.elementsEqual(expectedOutputFour, by: { $0 == $1 }), "Expected output to be \(expectedOutputFour), but found \(outputFour)")
 
 
 // Question Five
