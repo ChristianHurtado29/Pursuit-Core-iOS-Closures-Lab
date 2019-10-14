@@ -27,13 +27,21 @@ assert(myVal == 5, "Expected myVal to be five, but was \(myVal)")
 
 // Your function here
 
+func multiples(of:Int, in array:[Int]) -> [Int] {
+    let output = array.filter {
+        $0 % of == 0
+}
+    return output
+}
+
+//call fun abd give list of arraus
 
 // Uncomment out the following lines to check your solution
 
-//let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
-//let expectedOutputTwo = [3, 6, 9, 3, 12]
-//let outputTwo = multiples(of: 3, in: numbers)
-//assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTwo), but found \(outputTwo)")
+let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
+let expectedOutputTwo = [3, 6, 9, 3, 12]
+let outputTwo = multiples(of: 3, in: numbers)
+assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTwo), but found \(outputTwo)")
 
 
 // Question Three
